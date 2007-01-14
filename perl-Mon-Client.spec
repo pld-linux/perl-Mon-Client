@@ -1,5 +1,4 @@
-# TODO:
-#	pl description & summary
+#
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
 #
@@ -7,6 +6,7 @@
 %define		_rc		pre2
 %define		_realname	mon-client
 Summary:	Perl modules for interfacing with the mon package
+Summary(pl):	Modu³y Perla do wspó³pracy z pakietem mon
 Name:		perl-Mon-Client
 Version:	1.0.0
 Release:	0.%{_rc}.0.2
@@ -27,8 +27,18 @@ implemented, but more things like special logging routines and
 persistent monitors are being considered.
 
 "mon" is a tool for monitoring the availability of services. More
-information can be found at http://www.kernel.org/software/mon/ and
-https://sourceforge.net/projects/mon/.
+information can be found at <http://www.kernel.org/software/mon/> and
+<https://sourceforge.net/projects/mon/>.
+
+%description -l pl
+To jest modu³ Perla 5 do wspó³pracy z pakietem monitorowania systemu
+Mon. Aktualnie zaimplementowany jest tylko interfejs kliencki, ale pod
+uwagê brane jest wiêcej elementów, takich jak procedury do specjalnego
+logowania czy sta³e monitory.
+
+"mon" to narzêdzei do monitorowania dostêpno¶ci us³ug. Wiêcej
+informacji po¿na znale¼æ pod <http://www.kernel.org/software/mon/>
+oraz <https://sourceforge.net/projects/mon/>.
 
 %prep
 %setup -q -n %{_realname}-%{version}%{_rc}
@@ -43,6 +53,7 @@ https://sourceforge.net/projects/mon/.
 
 %install
 rm -rf $RPM_BUILD_ROOT
+
 %{__make} pure_install \
 	DESTDIR=$RPM_BUILD_ROOT
 
@@ -54,12 +65,12 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README
-%{_mandir}/man3/Mon::Client.3pm*
-%{_mandir}/man3/Mon::Config.3pm*
-%{_mandir}/man3/Mon::Protocol.3pm*
-%{_mandir}/man3/Mon::SNMP.3pm*
-%dir %{perl_vendorlib}/Mon/
+%dir %{perl_vendorlib}/Mon
 %{perl_vendorlib}/Mon/Client.pm
 %{perl_vendorlib}/Mon/Config.pm
 %{perl_vendorlib}/Mon/Protocol.pm
 %{perl_vendorlib}/Mon/SNMP.pm
+%{_mandir}/man3/Mon::Client.3pm*
+%{_mandir}/man3/Mon::Config.3pm*
+%{_mandir}/man3/Mon::Protocol.3pm*
+%{_mandir}/man3/Mon::SNMP.3pm*
