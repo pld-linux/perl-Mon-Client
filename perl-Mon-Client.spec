@@ -6,7 +6,7 @@
 %define		_rc		pre2
 %define		_realname	mon-client
 Summary:	Perl modules for interfacing with the mon package
-Summary(pl.UTF-8):   Moduły Perla do współpracy z pakietem mon
+Summary(pl.UTF-8):	Moduły Perla do współpracy z pakietem mon
 Name:		perl-Mon-Client
 Version:	1.0.0
 Release:	0.%{_rc}.0.2
