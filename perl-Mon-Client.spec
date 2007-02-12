@@ -6,7 +6,7 @@
 %define		_rc		pre2
 %define		_realname	mon-client
 Summary:	Perl modules for interfacing with the mon package
-Summary(pl):	Modu³y Perla do wspó³pracy z pakietem mon
+Summary(pl.UTF-8):   ModuÅ‚y Perla do wspÃ³Å‚pracy z pakietem mon
 Name:		perl-Mon-Client
 Version:	1.0.0
 Release:	0.%{_rc}.0.2
@@ -30,14 +30,14 @@ persistent monitors are being considered.
 information can be found at <http://www.kernel.org/software/mon/> and
 <https://sourceforge.net/projects/mon/>.
 
-%description -l pl
-To jest modu³ Perla 5 do wspó³pracy z pakietem monitorowania systemu
+%description -l pl.UTF-8
+To jest moduÅ‚ Perla 5 do wspÃ³Å‚pracy z pakietem monitorowania systemu
 Mon. Aktualnie zaimplementowany jest tylko interfejs kliencki, ale pod
-uwagê brane jest wiêcej elementów, takich jak procedury do specjalnego
-logowania czy sta³e monitory.
+uwagÄ™ brane jest wiÄ™cej elementÃ³w, takich jak procedury do specjalnego
+logowania czy staÅ‚e monitory.
 
-"mon" to narzêdzei do monitorowania dostêpno¶ci us³ug. Wiêcej
-informacji po¿na znale¼æ pod <http://www.kernel.org/software/mon/>
+"mon" to narzÄ™dzei do monitorowania dostÄ™pnoÅ›ci usÅ‚ug. WiÄ™cej
+informacji poÅ¼na znaleÅºÄ‡ pod <http://www.kernel.org/software/mon/>
 oraz <https://sourceforge.net/projects/mon/>.
 
 %prep
