@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 %define		_rc		pre2
 %define		_realname	mon-client
 Summary:	Perl modules for interfacing with the mon package
